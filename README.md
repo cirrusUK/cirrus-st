@@ -3,7 +3,7 @@ My fork of suckless st terminal with patches applied.
  $(PREFIX) is set to ~/.local so as is cirrus-st will install to ~/.local/bin/st
  edit PREFIX = path in config.mk if you wish to change it.
 + MODKEY|ShiftMask,  XK_N,   will open rofi to show/execute URL'S
-+ MODKEY|ShiftMask,  XK_d,   will open dmenu to show/execute URL'S
++ MODKEY|ShiftMask,  XK_D,   will open dmenu to show/execute URL'S
 
  By design config.h gets rm so config.def.h is your pal.
 
