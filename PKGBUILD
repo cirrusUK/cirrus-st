@@ -1,10 +1,10 @@
-# Maintainer: Derek Taylor (DistroTube) <derek@distrotube.com>
-pkgname=st-distrotube-git
+# Maintainer: cirrus
+pkgname=cirrus-st
 pkgver=0.8.4
 pkgrel=1
-pkgdesc="A heavily-patched and customized build of st the Suckless simple terminal from DistroTube."
+pkgdesc="."
 arch=(x86_64 i686)
-url="https://gitlab.com/dwt1/st-distrotube.git"
+url="https://github.com/cirrusUK/cirrus-st.git"
 license=('MIT')
 groups=()
 depends=(ttf-hack ttf-joypixels)
@@ -27,12 +27,12 @@ pkgver() {
 }
 
 build() {
-  cd st-distrotube
+  cd cirrus-st
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-  cd st-distrotube  
+  cd cirrus-st
   mkdir -p ${pkgdir}/opt/${pkgname}
   cp -rf * ${pkgdir}/opt/${pkgname}
   make PREFIX=/usr DESTDIR="${pkgdir}" install
